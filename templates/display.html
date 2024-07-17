@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('{{ url_for('static', filename='loan.jpg') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        
+
+       
+    </style>
+    
+
+    <!--------- Custom Style ------------->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!----------------------- Home Container Start --------------------->
+
+    <section>
+        <div class="display-container">
+
+            <!-- box 1 -->
+
+            <div class="display-box">
+
+                <!-- Display page -->
+
+                <section class="display">
+                    <div class="display-heading">
+                        {% if res == 1 %}
+                            <h2>CONGRATULATIONS!</h2>
+                            <h3>YOU ARE ELIGIBLE FOR LOAN.</h3>
+                        {% else %}
+                            <h2>SORRY!</h2>
+                            <h3>YOU ARE NOT ELIGIBLE FOR LOAN.</h3>
+                        {% endif %}
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </section>
+    <!------------------------- Home Container End -------------------------------->
+
+</body>
+
+</html>
